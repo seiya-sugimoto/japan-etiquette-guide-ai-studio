@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F9F7F2;
+  --color-indigo-japan: #1A237E;
+  --color-indigo-muted: #3F51B5;
+  --color-vermilion: #E64A19;
+  --color-vermilion-muted: #FFCCBC;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-indigo-japan font-sans antialiased;
+  }
+}
+
+.markdown-body {
+  @apply text-sm leading-relaxed;
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(26, 35, 126, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(26, 35, 126, 0.2);
+}
